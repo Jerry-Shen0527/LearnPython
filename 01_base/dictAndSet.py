@@ -1,10 +1,11 @@
-# d={'Micheal':95,'Jerry':113,'Lucy':70}  #大括号扩起表示是dictionary
-# print(d['Jerry'])
-# d['Cauchy']=109
-# print(d['Cauchy'],d.pop('Lucy'),d.get('Lucy'))
-# a=360
-# d[a]=[555,666]    #无法使用列表作为key,但是元组可以,元组内不能有可变对象
-# print(d[360])
+d={'Micheal':95,'Jerry':113,'Lucy':70}  #大括号扩起表示是dictionary
+print(d['Jerry'])
+d['Cauchy']=109
+print(d['Cauchy'],d.pop('Lucy'),d.get('Lucy'))
+a=360
+d[a]=[555,666]    #无法使用列表作为key,但是元组可以,元组内不能有可变对象
+print(d[360])
+print(d.get('Micheal'),d.get('Mary'))
 
 s=set([1,2,3,4,4,4,4,4])    #接受list作为参数，可以用range返回
 s.add(-1)
