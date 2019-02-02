@@ -41,9 +41,14 @@ print(sum(*L))  #类似指针的取内容
 def sumagain(*num,a):
     print(a,num)
 
-sumagain(3,6,a=2)   #定义原型：func(参数，可变参数，关键字参数，命名关键字参数)
+sumagain(3,6,a=2)   #定义原型：func(参数，默认参数，可变参数，关键字参数，命名关键字参数)
 
 def keyword(name,age,**kw):
     print(name,age,kw)
 
 keyword('Jerry',18,city='Hefei',single=True)
+
+def f1(a,b,c,*args,d,**kw):
+    print('a={0} b={1} c={2},d={3},args={4},kw={5}'.format(a,b,c,d,args,kw))
+
+f1(1,2,3,4,dd=6,fuck=100,d=5)
