@@ -19,3 +19,8 @@ print(next(gen))
 print(next(gen))
 print(next(gen))
 print(next(gen))
+
+from collections import Iterator
+print(isinstance(gen,Iterator))
+for x in gen:
+    print(x)
