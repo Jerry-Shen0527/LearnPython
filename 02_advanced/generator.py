@@ -16,8 +16,11 @@ g2=fib(10)  #有yield的函数命名后转换为生成器
 print(fib)
 print(g2)
 
-for num in range(10):
-    print(next(g2))
+for item in g2:
+    print(item)
+
+# for num in range(10):
+#     print(next(g2))
 
 #拿到返回值
 while True:
@@ -27,3 +30,25 @@ while True:
     except StopIteration as e:
         print('Generator return value:',e.value)
         break
+
+#Iterable和Iterator
+from collections import Iterable
+from collections import Iterator
+
+print(isinstance(g2,Iterable))
+print(isinstance([],Iterable))
+print(isinstance([],Iterable))
+print(isinstance((),Iterator))
+print(isinstance((),Iterable))
+print(isinstance(g2,Iterator))
+
+#for x in []的原型
+I=iter([1,2,3,4,5])
+while True:
+    try:
+        #get the next value
+       x=next(I)
+    except StopIteration:
+        break
+
+    print(next(I))

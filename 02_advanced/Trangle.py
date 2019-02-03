@@ -10,15 +10,15 @@ def Yang(max):
 
 gen=Yang(10)
 
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
 
 from collections import Iterator
 print(isinstance(gen,Iterator))
