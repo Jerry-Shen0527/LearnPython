@@ -14,9 +14,15 @@ def power3(x):
 
 print(list(map(power3,L)))  #map返回类型为map，要转换为list
 
+from functools import reduce
+
 #首字母大写
-def toupper(string):
-    pass
+
+def formalize(x):
+    return x[:1].upper()+x[1:].lower()  #利用切片大大简化代码(比下标方便许多)
+
+L=['maRy','JERRY',"SAm"]
+print(list(map(formalize,L)))
 
 #阶乘功能实现
 
@@ -31,9 +37,12 @@ print(Factorial(10))
 
 #字符串转换
 
-def changeup(x,y)
 def str2float(x):
+
+
+    def chartofloat(char):
+        pass
+
     if not isinstance(x,str):
         raise TypeError('bad errand type')
     pass
-
