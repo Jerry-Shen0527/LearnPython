@@ -1,7 +1,8 @@
 def power(x,expo=2):
     result=1
-    for a in range(expo):   #用while循环更自然
+    while expo>0:
         result=result*x
+        expo=expo-1
     return result
 
 print(power(3))
