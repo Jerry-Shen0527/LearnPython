@@ -39,10 +39,33 @@ print(Factorial(10))
 
 def str2float(x):
 
+    flag=False
+    times=0
+    DIGITS=dict(zip(list('0123456789'),range(10)))
 
     def chartofloat(char):
-        pass
+        nonlocal flag
+        nonlocal times
+        if flag==True:
+            times=times+1
+            return DIGITS[char]
+        else:
+            return DIGITS[char]
 
     if not isinstance(x,str):
-        raise TypeError('bad errand type')
-    pass
+        raise TypeError('bad errand type!')
+    
+    def combine(x,y):
+        nonlocal flag
+        if not isinstance(x,int):
+            x=chartofloat(x)
+        if y=='.':
+            if flag:
+                raise TypeError('input is not a float') #检查输入是否合规
+            flag=True
+            return x
+        return x*10+chartofloat(y)
+       
+    return reduce(combine,x)/10**times
+
+print(str2float('0.456'))
