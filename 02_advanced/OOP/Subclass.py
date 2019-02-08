@@ -12,6 +12,9 @@ class Dog(Animal):
     #类内定义的同名函数会覆盖父类的函数
     def run(self):
         print('A dog is running...')
+    
+    def __len__(self):
+        return 100
 
 class Cat(Animal):
     def run(self):
