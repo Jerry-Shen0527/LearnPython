@@ -23,6 +23,6 @@ print("Are animal all cats?",isinstance(Animal(),Cat))
 
 Cat().run()
 Cat().run_twice()
-#父类的函数调用的同名函数也会被覆盖，是为多态
+#父类的函数调用的同名函数也会被覆盖，是为多态，但其实并不一定需要继承，动态语言的鸭子特性导致只要有run方法就可以正常运行
 
 Dog().run()
