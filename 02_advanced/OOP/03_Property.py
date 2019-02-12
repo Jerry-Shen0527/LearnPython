@@ -42,6 +42,7 @@ class MyObject(object):
         self.x=3
     def power(self):
         return self.x*self.x
+    name='Student'
 
 obj=MyObject()
 print(hasattr(obj,'x'))
@@ -53,3 +54,13 @@ print(getattr(obj,'x'))
 f=getattr(obj,'power')
 setattr(obj,'x',5)
 print(f())  #此处f仅仅为一个指向函数的指针，因此改变实例存储的值时，再调用函数，结果也会改变
+
+#实例属性和类属性
+print('类属性:',obj.name)
+print(obj.name)
+obj.name='Jerry'
+print(obj.name)
+del obj.name
+print(obj.name)
+del obj.name    #此处已经无法删除
+print(getattr(obj,'name'))
