@@ -1,9 +1,6 @@
 print(3*3)
 print(3**3)
 print(560//3.8)
-<<<<<<< HEAD
-print(1//2)
-=======
 
 a = 100
 b = 12.345
@@ -25,4 +22,3 @@ print('%d / %d = %f' % (a, b, a / b))
 print('%d // %d = %d' % (a, b, a // b))
 print('%d %% %d = %d' % (a, b, a % b))
 print('%d ** %d = %d' % (a, b, a ** b))
->>>>>>> b03fd86baf5644fd02eb2a75ca1529fbcbca0cde
